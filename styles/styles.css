@@ -1,0 +1,219 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  background: rgb(23, 107, 207);
+  background: linear-gradient(
+    234deg,
+    rgba(23, 107, 207, 1) 38%,
+    rgba(40, 64, 194, 1) 62%
+  );
+}
+
+.form-container {
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: -1px -2px 35px -12px rgba(0, 0, 0, 0.85);
+}
+
+.form-container .registration-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 300px;
+  padding: 40px;
+}
+
+.form-container .registration-form h2 {
+  margin: 0;
+}
+
+.form-container .registration-form .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .registration-form .form-row .date-input-wrapper {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid rgb(191, 191, 191);
+  border-radius: 10px;
+}
+
+.form-container .registration-form .form-row label {
+  font-weight: 700;
+}
+
+.form-container .registration-form .form-row input {
+  width: -webkit-fill-available;
+  padding: 8px;
+  border: 2px solid rgb(191, 191, 191);
+  border-radius: 10px;
+}
+
+.form-container .registration-form .form-row .date-input-wrapper input {
+  position: relative;
+  border: none;
+  outline: none;
+}
+
+.form-container .registration-form .form-row .date-input-wrapper button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 30px;
+  cursor: pointer;
+  border: none;
+  background-color: rgb(65, 75, 178);
+}
+
+.form-container .registration-form .form-submit-button {
+  cursor: pointer;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(65, 75, 178);
+  color: #ffffff;
+  font-size: 18px;
+}
+
+.date-picker-modal {
+  position: absolute;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+}
+
+.modal-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+
+.date-picker-modal .modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal-closed {
+  display: none;
+}
+
+.modal-open {
+  display: block;
+}
+
+.date-picker-modal .date-picker-toolbar {
+  display: flex;
+  gap: 4px;
+}
+
+.date-picker-modal .date-picker-toolbar .month-select {
+  width: 60%;
+  padding: 4px;
+  border: 2px solid rgb(191, 191, 191);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.date-picker-modal .date-picker-toolbar .year-input {
+  width: 40%;
+  padding: 4px;
+  border: 2px solid rgb(191, 191, 191);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+}
+
+.date-picker-modal .day-labels {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.date-picker-modal .day-labels p {
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.date-picker-modal .date-container {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  text-align: center;
+}
+
+.date-picker-modal .date-container button {
+  border: none;
+  background-color: #ffffff;
+  padding: 8px 0px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 300ms linear;
+}
+
+.date-picker-modal .date-container button:hover:enabled {
+  background-color: rgba(65, 75, 178, 0.2);
+}
+
+.date-picker-modal .date-container button:disabled {
+  border: none;
+  pointer-events: none;
+}
+
+.date-picker-modal .date-modal-button-container {
+  display: flex;
+  gap: 4px;
+}
+
+.date-picker-modal .date-container button.today {
+  background-color: rgba(65, 75, 178, 0.2);
+}
+
+.date-picker-modal .date-container button.selected {
+  background-color: rgba(65, 75, 178, 1);
+  font-weight: bold;
+  color: white;
+}
+
+.date-picker-modal .date-container button.selected:hover {
+  background-color: rgba(65, 75, 178, 1);
+}
+
+.date-picker-modal .date-modal-button-container .modal-close-button {
+  width: 100%;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 5px;
+  border: 2px solid rgb(65, 75, 178);
+  background-color: #ffffff;
+  color: rgb(65, 75, 178);
+  font-size: 18px;
+}
+
+.date-picker-modal .date-modal-button-container .modal-select-date {
+  width: 100%;
+  cursor: pointer;
+  padding: 4px;
+  border: 2px solid rgb(65, 75, 178);
+  border-radius: 5px;
+  background-color: rgb(65, 75, 178);
+  color: #ffffff;
+  font-size: 18px;
+}

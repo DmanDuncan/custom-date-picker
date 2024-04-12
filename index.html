@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration</title>
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <div class="form-container">
+      <form id="registrationForm" class="registration-form">
+        <h2>Registration Form</h2>
+        <div class="form-row">
+          <label>First Name</label>
+          <input />
+        </div>
+        <div class="form-row">
+          <label>Last Name</label>
+          <input />
+        </div>
+        <div class="form-row">
+          <label>Email Address</label>
+          <input />
+        </div>
+        <div class="form-row">
+          <label>Date Of Birth</label>
+          <span class="date-input-wrapper">
+            <input class="date-input" readonly />
+            <button
+              type="button"
+              class="modal-open-button"
+              title="Pick date of birth"
+            >
+              <img src="./assets/calendar-icon.svg" />
+            </button>
+          </span>
+        </div>
+        <button type="submit" class="form-submit-button">Submit</button>
+      </form>
+    </div>
+
+    <div class="date-picker-modal modal-closed">
+      <div class="modal-content">
+        <div class="date-picker-toolbar">
+          <select class="month-select">
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+          </select>
+          <input type="number" class="year-input" maxlength="4" />
+        </div>
+
+        <div class="day-labels">
+          <p>Sun</p>
+          <p>Mon</p>
+          <p>Tue</p>
+          <p>Wed</p>
+          <p>Thu</p>
+          <p>Fri</p>
+          <p>Sat</p>
+        </div>
+
+        <div class="date-container">test</div>
+
+        <div class="date-modal-button-container">
+          <button class="modal-close-button">Cancel</button>
+          <button class="modal-select-date">Select</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-overlay modal-closed"></div>
+
+    <script src="index.js" type="module" defer></script>
+  </body>
+</html>
