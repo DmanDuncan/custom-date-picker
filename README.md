@@ -16,21 +16,27 @@ Getting Started
 
 Clone the repository:
 Bash
+
 git clone https://github.com/DmanDuncan/custom-date-picker
+
 Use code with caution.
+
 Install dependencies:
 
 or 
 
 Bash
+
 cd custom-date-picker
+
 npm install
-Use code with caution.
 
 Run the project:
+
 Bash
+
 npm run dev
-Use code with caution.
+
 This will typically start the server on http://localhost:3000 (or a port specified in your code). You can access the application by opening this URL in your browser.
 
 Usage
